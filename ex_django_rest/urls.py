@@ -23,4 +23,7 @@ router.register(r'question', views.QuestionViewSet)
 
 urlpatterns = [
     url(r'^api/v1/', include(router.urls, namespace='api')),
+
+    # Add static file serving for DEBUG
+    url(r'^', include('django.contrib.staticfiles.urls')),
 ]

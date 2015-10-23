@@ -18,4 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+
+    # Add static file serving for DEBUG
+    url(r'^', include('django.contrib.staticfiles.urls')),
 ]
